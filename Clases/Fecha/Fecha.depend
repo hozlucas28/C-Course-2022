@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1661114669 source:c:\users\hozlu\documents\workspace\c-course-2022\clases\fecha\fecha.c
+	<stdio.h>
+	"Fecha.h"
+
+1661114583 c:\users\hozlu\documents\workspace\c-course-2022\clases\fecha\fecha.h
+
+1661114708 source:c:\users\hozlu\documents\workspace\c-course-2022\clases\fecha\main.c
+	<stdio.h>
+	"Fecha.h"
+
