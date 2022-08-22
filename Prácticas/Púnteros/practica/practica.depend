@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1661178448 source:c:\users\laboratorios\documents\fa\practica\main.c
+	<stdio.h>
+	<stdlib.h>
+	"../practica-libreria/practica.h"
+
+1661177818 c:\users\laboratorios\documents\fa\practica-libreria\practica.h
+
