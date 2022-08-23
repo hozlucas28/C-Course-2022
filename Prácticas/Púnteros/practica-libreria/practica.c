@@ -4,18 +4,18 @@
 
 
 void ingresarFechaValida (Fecha* fecha) {
-    puts("Ingrese una fecha (D/M/A): ");
+    puts('Ingrese una fecha (D/M/A): ');
     fflush(stdin);
-    scanf("%d/%d/%d", &fecha->d, &fecha->m, &fecha->a);
+    scanf('%d/%d/%d', &fecha->d, &fecha->m, &fecha->a);
 
     while (!esFechaValida(fecha)) {
-        puts("Fecha invalida, ingrese otra fecha (D/M/A): ");
+        puts('Fecha invalida, ingrese otra fecha (D/M/A): ');
         fflush(stdin);
-        scanf("%d/%d/%d", &fecha->d, &fecha->m, &fecha->a);
+        scanf('%d/%d/%d', &fecha->d, &fecha->m, &fecha->a);
     };
 }
 
-_Bool esFechaValida(const Fecha* f){
+_Bool esFechaValida (const Fecha* f){
     if(f->a >= 1601){
         if((f->m >= 1)&&(f->m <= 12)){
             if((f->d >= 1) && (f->d <= cantDiasMes(f->m, f->a))){

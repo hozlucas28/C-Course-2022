@@ -12,7 +12,7 @@ typedef struct {
 } Fecha;
 
 void ingresarFechaValida (Fecha* fecha);
-_Bool esFechaValida(const Fecha* fecha);
+_Bool esFechaValida (const Fecha* fecha);
 int cantDiasMes (int m, int a);
 _Bool esBiciesto(int a);
  

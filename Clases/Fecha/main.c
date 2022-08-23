@@ -22,9 +22,9 @@ int main() {
     Fecha f = ingresarFecha();
     
     if (esFechaValida(f)) {
-        printf("%d/%d/%d es una fecha valida.\n", f.dia, f.mes, f.anio); //Salida verdadera.
+        printf('%d/%d/%d es una fecha valida.\n', f.dia, f.mes, f.anio); //Salida verdadera.
     } else {
-        printf("%d/%d/%d no es una fecha valida.\n", f.dia, f.mes, f.anio); //Salida falsa.
+        printf('%d/%d/%d no es una fecha valida.\n', f.dia, f.mes, f.anio); //Salida falsa.
     };
     return 0;
 }
