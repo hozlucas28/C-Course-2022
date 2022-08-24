@@ -22,13 +22,16 @@
     #define esBisiesto(a)   (((a) % 4 == 0) && ((a) % 100 != 0)) || ((a) % 400 == 0)
 
 
-    /* --------------------------- Funciones Prototipo -------------------------- */
+    /* ------------------------------- Estructuras ------------------------------ */
 
     typedef struct {
         int dia;
         int mes;
         int anio;
     } Fecha;
+
+
+    /* --------------------------- Funciones Prototipo -------------------------- */
 
     Fecha ingresarFecha();
     int esFechaValida(Fecha fecha);
