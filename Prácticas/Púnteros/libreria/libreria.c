@@ -1,17 +1,19 @@
-#include <stdio.h>
-#include <stdbool.h>
-#include "practica.h"
+//El archivo viene por default en blanco.
+
+#include <stdio.h> //Se tuvo que agregar
+#include <stdbool.h> //Se tuvo que agregar
+#include "libreria.h" //Se tuvo que agregar
 
 
 void ingresarFechaValida (Fecha* fecha) {
-    puts('Ingrese una fecha (D/M/A): ');
+    puts("Ingrese una fecha (D/M/A): ");
     fflush(stdin);
-    scanf('%d/%d/%d', &fecha->d, &fecha->m, &fecha->a);
+    scanf("%d/%d/%d", &fecha->d, &fecha->m, &fecha->a);
 
     while (!esFechaValida(fecha)) {
-        puts('Fecha invalida, ingrese otra fecha (D/M/A): ');
+        puts("Fecha invalida, ingrese otra fecha (D/M/A): ");
         fflush(stdin);
-        scanf('%d/%d/%d', &fecha->d, &fecha->m, &fecha->a);
+        scanf("%d/%d/%d", &fecha->d, &fecha->m, &fecha->a);
     };
 }
 
@@ -60,5 +62,5 @@ _Bool esBiciesto(int a){
     }else{
         return false;
     }
-    
+
 }

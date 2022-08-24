@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../practica-libreria/practica.h"
+#include "../libreria/libreria.h" //Se tuvo que incluir.
 
 
 int main()
@@ -9,7 +9,7 @@ int main()
 
    ingresarFechaValida(&fechaMain);
 
-    printf('%d/%d/%d',fechaMain.d,fechaMain.m,fechaMain.a);
+    printf("%d/%d/%d",fechaMain.d,fechaMain.m,fechaMain.a);
 
     return 0;
 }
