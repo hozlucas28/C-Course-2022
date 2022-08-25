@@ -2,7 +2,7 @@
 /* --------------------------------------------------------------------------
  * APUNTES:
  *          Utilizar las Macros en cuestiones simples, que ocupen una
- *          unica linea, como las declaradas en este archivo.
+ *          única línea, como las declaradas en este archivo.
  * 
  * 
  * IMPORTANTE:
@@ -17,9 +17,7 @@
     /* ------------------------------ Definiciones ------------------------------ */
 
     #define FECHA_H
-    #define FALSO   0
-    #define VERDADERO   1
-    #define esBisiesto(a)   (((a) % 4 == 0) && ((a) % 100 != 0)) || ((a) % 400 == 0)
+    #define esBisiesto(anio)   (((anio) % 4 == 0) && ((anio) % 100 != 0)) || ((anio) % 400 == 0)
 
 
     /* ------------------------------- Estructuras ------------------------------ */
@@ -32,8 +30,15 @@
 
 
     /* --------------------------- Funciones Prototipo -------------------------- */
+    
+    void ingresarFechaAValidar (Fecha* fecha); //Ingresar fecha valida.
+    void ingresarDiasASumar (const char* mensaje, int* numero); //Ingresar la cantidad de días a sumar.
 
-    Fecha ingresarFecha();
-    int esFechaValida(Fecha fecha);
-    int cantDiasMes(int mes, int anio);
+    _Bool esFechaValida (const Fecha* fecha); //Validar fecha.
+
+    void sumarDiasALaFecha (const Fecha* fecha, int dias, Fecha* fechaSuma); //Sumar días a la fecha.
+    int diferenciaDeDiasEntreFechas (const Fecha* fecha1, const Fecha* fecha2); //Calcular la diferencia de días entre dos fechas.
+    
+    void mostrarFechaSumada(const Fecha* fecha); //Mostrar en pantalla la fecha, resultante de la suma de días.
+    int cantidadDeDiasEnElMes (int mes, int anio); //Devolver la cantidad de días, según el mes y el año.
 #endif
