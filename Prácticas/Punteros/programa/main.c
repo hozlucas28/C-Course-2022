@@ -1,15 +1,15 @@
+/* ------------------------------- Inclusiones ------------------------------ */
 #include <stdio.h>
 #include <stdlib.h>
-#include "../libreria/libreria.h" //Se tuvo que incluir.
+#include "../libreria/libreria.h" //Librería local con funciones.
 
 
-int main()
-{
+
+/* ---------------------------- Código Principal ---------------------------- */
+
+int main() {
     Fecha fechaMain;
-
-   ingresarFechaValida(&fechaMain);
-
-    printf("%d/%d/%d",fechaMain.d,fechaMain.m,fechaMain.a);
-
+    ingresarFechaValida(&fechaMain); 
+    printf("La fecha: %d/%d/%d es valida.", fechaMain.d, fechaMain.m, fechaMain.a);
     return 0;
 }
