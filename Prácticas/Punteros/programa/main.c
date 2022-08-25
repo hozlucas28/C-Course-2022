@@ -10,6 +10,6 @@
 int main() {
     Fecha fechaMain;
     ingresarFechaValida(&fechaMain); 
-    printf("La fecha: %d/%d/%d es valida.", fechaMain.d, fechaMain.m, fechaMain.a);
+    printf("La fecha: %d/%d/%d es valida.", fechaMain.dia, fechaMain.mes, fechaMain.anio);
     return 0;
 }
