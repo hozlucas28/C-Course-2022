@@ -23,27 +23,6 @@ void vecOrdenarPorSeleccion (int* vector, int cantElementos);
 /*                           FUNCIONES DESARROLLADAS                          */
 /* -------------------------------------------------------------------------- */
 
-void vecOrdenarPorSeleccion (int* vector, int cantElementos) {
-    int* direccionDelMenor;
-    int* ultimo = vector + (cantElementos - 1);
-
-    for (int* i = vector; i < ultimo; i++) {
-        direccionDelMenor = vecBuscarMenor(i, ultimo);
-        if (direccionDelMenor != i) {intercambiar(i, direccionDelMenor);};
-    };
-}
-
-
-int* vecBuscarMenor (int* inicio, int* fin) {
-    int* menor = inicio;
-
-    for (int* j = (inicio + 1); j <= fin; j++) {
-        if (*j < *menor) {menor = j;};
-    };
-    return menor;
-}
-
-
 void intercambiar (int* a, int* b) {
     int aux = *a;
 
@@ -58,6 +37,27 @@ void mostrarVector (int* vector, int cantElementos) {
         printf(" %d ", vector[i]);
     };
     printf("]\n");
+}
+
+
+int* vecBuscarMenor (int* inicio, int* fin) {
+    int* menor = inicio;
+
+    for (int* j = (inicio + 1); j <= fin; j++) {
+        if (*j < *menor) {menor = j;};
+    };
+    return menor;
+}
+
+
+void vecOrdenarPorSeleccion (int* vector, int cantElementos) {
+    int* direccionDelMenor;
+    int* ultimo = vector + (cantElementos - 1);
+
+    for (int* i = vector; i < ultimo; i++) {
+        direccionDelMenor = vecBuscarMenor(i, ultimo);
+        if (direccionDelMenor != i) {intercambiar(i, direccionDelMenor);};
+    };
 }
 
 
