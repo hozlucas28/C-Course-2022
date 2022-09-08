@@ -31,14 +31,11 @@
 
     /* --------------------------- Funciones Prototipo -------------------------- */
     
-    void ingresarFechaAValidar (Fecha* fecha); //Ingresar fecha valida.
-    void ingresarDiasASumar (const char* mensaje, int* numero); //Ingresar la cantidad de días a sumar.
-
-    _Bool esFechaValida (const Fecha* fecha); //Validar fecha.
-
-    void sumarDiasALaFecha (const Fecha* fecha, int dias, Fecha* fechaSuma); //Sumar días a la fecha.
-    int diferenciaDeDiasEntreFechas (const Fecha* fecha1, const Fecha* fecha2); //Calcular la diferencia de días entre dos fechas.
-    
-    void mostrarFechaSumada(const Fecha* fecha); //Mostrar en pantalla la fecha, resultante de la suma de días.
-    int cantidadDeDiasEnElMes (int mes, int anio); //Devolver la cantidad de días, según el mes y el año.
+    void ingresarFechaAValidar (Fecha* fecha);
+    void ingresarDiasASumar (const char* mensaje, int* numero);
+    bool esFechaValida (const Fecha* fecha);
+    void sumarDiasALaFecha (const Fecha* fecha, int dias, Fecha* fechaSuma);
+    int diferenciaDeDiasEntreFechas (const Fecha* fecha1, const Fecha* fecha2);
+    int cantidadDeDiasEnElMes (int mes, int anio);
+    void mostrarFechaSumada (const Fecha* fecha);
 #endif

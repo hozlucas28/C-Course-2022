@@ -1,42 +1,27 @@
 
-/* -------------------------------------------------------------------------- */
-/*                                  LIBRERÍAS                                 */
-/* -------------------------------------------------------------------------- */
+/* ------------------------------- Inclusiones ------------------------------ */
 
 #include <stdio.h>
 #include <stdlib.h>
 
 
 
-/* -------------------------------------------------------------------------- */
-/*                             FUNCIONES PROTOTIPO                            */
-/* -------------------------------------------------------------------------- */
+/* --------------------------- Funciones Prototipo -------------------------- */
 
 void intercambiar (int* a, int* b);
-void mostrarVector (int* vector, int cantElementos);
 int* vecBuscarMenor (int* inicio, int* fin);
 void vecOrdenarPorSeleccion (int* vector, int cantElementos);
+void mostrarVector (int* vector, int cantElementos);
 
 
 
-/* -------------------------------------------------------------------------- */
-/*                           FUNCIONES DESARROLLADAS                          */
-/* -------------------------------------------------------------------------- */
+/* ------------------------- Funciones Desarrolladas ------------------------ */
 
 void intercambiar (int* a, int* b) {
     int aux = *a;
 
     *a = *b;
     *b = aux;
-}
-
-
-void mostrarVector (int* vector, int cantElementos) {
-    printf("[");
-    for (int i = 0; i < cantElementos; i++) {
-        printf(" %d ", vector[i]);
-    };
-    printf("]\n");
 }
 
 
@@ -61,17 +46,24 @@ void vecOrdenarPorSeleccion (int* vector, int cantElementos) {
 }
 
 
+void mostrarVector (int* vector, int cantElementos) {
+    printf("[");
+    for (int i = 0; i < cantElementos; i++) {
+        printf(" %d ", vector[i]);
+    };
+    printf("]\n");
+}
 
-/* -------------------------------------------------------------------------- */
-/*                              CÓDIGO PRINCIPAL                              */
-/* -------------------------------------------------------------------------- */
+
+
+/* ---------------------------- Código Principal ---------------------------- */
 
 int main() {
+    system ("chcp 65001 > nil");
     int vector[10] = {5, 3, 9, 8, 10, 6, 7, 2, 1, 4};
 
     mostrarVector(vector, 10);
     vecOrdenarPorSeleccion(vector, 10);
     mostrarVector(vector, 10);
-
     return 0;
 }

@@ -10,41 +10,25 @@
 -------------------------------------------------------------------------- */
 
 
-/* -------------------------------------------------------------------------- */
-/*                                  LIBRERÍAS                                 */
-/* -------------------------------------------------------------------------- */
+/* ------------------------------- Inclusiones ------------------------------ */
 
 #include <stdio.h>
-#include "Fecha.h" //Librería local de Macros, Estructuras y Prototipos de Función.
+#include "Fecha.h" //Macros, Estructuras y Prototipos de Función.
 
 
 
-/* -------------------------------------------------------------------------- */
-/*                              Código Principal                              */
-/* -------------------------------------------------------------------------- */
+/* ---------------------------- Código Principal ---------------------------- */
 
 int main() {
-    /* ------------------------- Variables y Estructuras ------------------------ */
+    system ("chcp 65001 > nil");
     int diasASumar;
     Fecha fecha, fechaSuma;
 
-
-    /* -------------------------------- Entradas -------------------------------- */
-
     ingresarFechaAValidar(&fecha);
-    ingresarDiasASumar("Ingrese la cantidad de dias a sumar: ", &diasASumar);
-
-
-    /* -------------------------------- Procesos -------------------------------- */
-
+    ingresarDiasASumar("Ingrese la cantidad de días a sumar: ", &diasASumar);
     sumarDiasALaFecha(&fecha, diasASumar, &fechaSuma);
 
-
-    /* --------------------------------- Salidas -------------------------------- */
-
-    printf("La fecha sumada es: ");
     mostrarFechaSumada(&fechaSuma);
-
-    printf("\nLa diferencia de dias entre las dos fechas es: %d.", diferenciaDeDiasEntreFechas(&fecha, &fechaSuma));
+    printf("\nLa diferencia de días entre las dos fechas es: %d.", diferenciaDeDiasEntreFechas(&fecha, &fechaSuma));
     return 0;
 }
