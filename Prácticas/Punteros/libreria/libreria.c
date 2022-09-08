@@ -22,7 +22,7 @@ void ingresarFechaAValidar (Fecha* fecha) {
 }
 
 
-_Bool esFechaValida (const Fecha* fecha) {
+bool esFechaValida (const Fecha* fecha) {
     if (fecha->anio >= 1601) {
         if ((fecha->mes >= 1) && (fecha->mes <= 12)) {
             if ((fecha->dia >= 1) && (fecha->dia <= cantDiasMes(fecha->mes, fecha->anio))) {
