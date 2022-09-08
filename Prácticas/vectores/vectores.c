@@ -1,7 +1,5 @@
 
-/* -------------------------------------------------------------------------- */
-/*                                 INCLUSIONES                                */
-/* -------------------------------------------------------------------------- */
+/* ------------------------------- Inclusiones ------------------------------ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,73 +8,45 @@
 
 
 
-/* -------------------------------------------------------------------------- */
-/*                                 DEFINCIONES                                */
-/* -------------------------------------------------------------------------- */
-
-#define DEBUG true
-#define DEBUG_CODE(a, b) printf("\nVector de entrada (desordenado): {"); \
-    for(int i = 0; i < ce; i++){printf("%d ", vec[i]);}; \
-    printf("}.\n "); \
+/* ------------------------- Funciones Desarrolladas ------------------------ */
 
 
-
-/* -------------------------------------------------------------------------- */
-/*                           FUNCIONES DESARROLLADAS                          */
-/* -------------------------------------------------------------------------- */
-
-int ordenarVector(int* vec, int ce){ //Ordenar vector.
+//Ordenar vector.
+int ordenarVector(int* vec, int ce){
     int aux;
 
-    if (DEBUG) {
-        printf("\nVector de entrada (desordenado): {");
-        for(int i = 0; i < ce; i++){printf("%d ", vec[i]);};
-        printf("}.\n ");
-    };
-
-    for(int i=0;i<ce;i++){
-        for(int j=i+1;j<ce;j++){
-
-            if(vec[i] < vec[j]){
+    for (int i = 0; i < ce; i++) {
+        for (int j = i++; j < ce; j++){
+            if (vec[i] < vec[j]) {
                 aux = vec[i];
                 vec[i] = vec[j];
                 vec[j] = aux;
+            };
+        };
+    };
 
-            }
-
-        }
-    }
-
-    printf("\nVector de salida (ordenado): { ");
-    for(int i=0; i<ce;i++){
-        printf("%d ",vec[i]);
-    }
-    printf("}\n ");
+    mostrarVector("Vector ordenado: ", vec, ce);
     return 0;
 }
 
 
-void eliminarElementoVector(int* vec, int* ce, int dato) { //Eliminar elemento del vector.
-
+//Eliminar elemento del vector.
+void eliminarElementoVector(int* vec, int* ce, int dato) { 
     //Obtiene posición del dato.
     int i = 0;
     while (dato < vec[i]) {i++;};
 
-    //Remplaza con el valor del elemento a la derecha, cada elemento.
-    for (int j = i; j <= (*ce) - 2; j++) {
-        vec[j] = vec[j+1];
-    }
+    //Desplaza los elementos hacia la derecha y modifica el tamaño del vector.
+    for (int j = i; j <= (*ce) - 2; j++) {vec[j] = vec[j++];};
+    (*ce)--;
 
-    (*ce)--; //Modifica el tamaño del vector.
-
-    if (DEBUG) {
-        printf("\nVector de entrada (elemento eliminado): {");
-        for(int i = 0; i < (*ce); i++){printf("%d ", vec[i]);};
-        printf("}.\n ");
-    };
+    mostrarVector("Vector con elemento eliminado: ", vec, ce);
 }
 
 
-void eliminarElementosDuplicadosVector(int* vec, int* ce, int dato) { //Eliminar elemento duplicado del vector.
-
+//Mostrar vector.
+void mostrarVector (char mensaje, int* vec, int ce) {
+    printf("\n%s{", mensaje);
+    for (int i = 0; i < ce; i++) {printf("%d ", vec[i]);};
+    printf("}\n");
 }

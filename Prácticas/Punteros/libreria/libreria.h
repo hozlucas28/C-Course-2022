@@ -18,7 +18,7 @@
 
     void ingresarFechaAValidar (Fecha* fecha); //Ingresar fecha.
     
-    _Bool esFechaValida (const Fecha* fecha); //Validar fecha.
+    bool esFechaValida (const Fecha* fecha); //Validar fecha.
     
     int cantDiasMes (int mes, int anio); //Devolver la cantidad de días, según el mes y el año.
 #endif

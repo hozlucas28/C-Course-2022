@@ -1,29 +1,19 @@
-/* -------------------------------------------------------------------------- */
-/*                                 Inclusiones                                */
-/* -------------------------------------------------------------------------- */
+
+/* ------------------------------- Inclusiones ------------------------------ */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "../libreria/libreria.h" //Librería local con funciones.
+#include "../libreria/libreria.h"
 
 
 
-/* -------------------------------------------------------------------------- */
-/*                              Código Principal                              */
-/* -------------------------------------------------------------------------- */
+/* ---------------------------- Código Principal ---------------------------- */
 
 int main() {
-    /* -------------------------------- Variables ------------------------------- */
+    system ("chcp 65001 > nil");
     Fecha fechaMain;
 
-
-    /* -------------------------------- Entradas -------------------------------- */
-
-    ingresarFechaAValidar(&fechaMain); 
-
-
-    /* --------------------------------- Salidas -------------------------------- */
-    
+    ingresarFechaAValidar(&fechaMain);     
     printf("La fecha: %d/%d/%d es valida.", fechaMain.dia, fechaMain.mes, fechaMain.anio);
     return 0;
 }
