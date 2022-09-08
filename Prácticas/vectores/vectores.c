@@ -10,8 +10,6 @@
 
 /* ------------------------- Funciones Desarrolladas ------------------------ */
 
-
-//Ordenar vector.
 int ordenarVector(int* vec, int ce){
     int aux;
 
@@ -30,7 +28,6 @@ int ordenarVector(int* vec, int ce){
 }
 
 
-//Eliminar elemento del vector.
 void eliminarElementoVector(int* vec, int* ce, int dato) { 
     //Obtiene posición del dato.
     int i = 0;
@@ -44,7 +41,6 @@ void eliminarElementoVector(int* vec, int* ce, int dato) {
 }
 
 
-//Mostrar vector.
 void mostrarVector (char mensaje, int* vec, int ce) {
     printf("\n%s{", mensaje);
     for (int i = 0; i < ce; i++) {printf("%d ", vec[i]);};
