@@ -24,9 +24,9 @@
 
     /* --------------------------- Funciones Prototipo -------------------------- */
 
-    void crearSecuenciaPalabras (SecuenciaPalabras* secuencia, char* cadena);
-    bool leerPalabra (SecuenciaPalabras* secuencia, Palabra* palabra);
-    bool finSecuencia (const SecuenciaPalabras* secuencia);
-    void mostrarPalabra (const Palabra* palabra);
-    bool esLetra (char c);
+    void crearSecuenciaPalabras(SecuenciaPalabras* secuencia, char* cadena);
+    bool leerPalabra(SecuenciaPalabras* secuencia, Palabra* palabra);
+    bool finSecuencia(const SecuenciaPalabras* secuencia);
+    void mostrarPalabra(const Palabra* palabra);
+    bool esLetra(char c);
 #endif

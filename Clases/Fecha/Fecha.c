@@ -26,7 +26,7 @@
 
 /* ------------------------- Funciones Desarrolladas ------------------------ */
 
-void ingresarFechaAValidar (Fecha* fecha) {
+void ingresarFechaAValidar(Fecha* fecha) {
     puts("Ingrese una fecha (Dia/Mes/Anio):");
     fflush(stdin); 
     scanf("%d/%d/%d", &fecha->dia, &fecha->mes, &fecha->anio);
@@ -39,7 +39,7 @@ void ingresarFechaAValidar (Fecha* fecha) {
 }
 
 
-void ingresarDiasASumar (const char* mensaje, int* numero) {
+void ingresarDiasASumar(const char* mensaje, int* numero) {
     puts(mensaje);
     fflush(stdin);
     scanf("%d", numero);
@@ -52,7 +52,7 @@ void ingresarDiasASumar (const char* mensaje, int* numero) {
 }
 
 
-bool esFechaValida (const Fecha* fecha) {
+bool esFechaValida(const Fecha* fecha) {
     if (fecha->anio >= 1601) {
         if ((fecha->mes >= 1) && (fecha->mes <= 12)) {
             if ((fecha->dia >= 1) && (fecha->dia <= cantidadDeDiasEnElMes(fecha->mes, fecha->anio))) {
@@ -64,7 +64,7 @@ bool esFechaValida (const Fecha* fecha) {
 }
 
 
-void sumarDiasALaFecha (const Fecha* fecha, int dias, Fecha* fechaSuma) {
+void sumarDiasALaFecha(const Fecha* fecha, int dias, Fecha* fechaSuma) {
     *fechaSuma = *fecha;
     fechaSuma->dia += dias;
 
@@ -80,19 +80,21 @@ void sumarDiasALaFecha (const Fecha* fecha, int dias, Fecha* fechaSuma) {
 }
 
 
-int diferenciaDeDiasEntreFechas (const Fecha* fecha1, const Fecha* fecha2) {
+int diferenciaDeDiasEntreFechas(const Fecha* fecha1, const Fecha* fecha2) {
     int difereciaDeDias = fecha2->dia - fecha1->dia;
 
     for (
         int mesActual = fecha1->mes, anioActual = fecha1->anio; //Variables.
         ((anioActual * 100) + mesActual) < ((fecha2->anio * 100) + fecha2->mes); //Condiciones.
         anioActual = anioActual + mesActual / 12, mesActual %= 12, mesActual++ //Ejecución por iteración.
-    ) {difereciaDeDias += cantidadDeDiasEnElMes(mesActual, anioActual);};
+    ) {
+        difereciaDeDias += cantidadDeDiasEnElMes(mesActual, anioActual); //Código.
+    };
     return difereciaDeDias;
 }
 
 
-int cantidadDeDiasEnElMes (int mes, int anio) {
+int cantidadDeDiasEnElMes(int mes, int anio) {
     static int cantidadDeDiasEnLosMeses[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
     if ((mes == 2) && (esBisiesto(anio))) {return 29;};

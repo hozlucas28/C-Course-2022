@@ -10,13 +10,13 @@
 
 /* ------------------------- Funciones Desarrolladas ------------------------ */
 
-void crearSecuenciaPalabras (SecuenciaPalabras* secuencia, char* cadena) {
+void crearSecuenciaPalabras(SecuenciaPalabras* secuencia, char* cadena) {
     secuencia->cursor = cadena;
     secuencia->finSecuencia = false;
 }
 
 
-bool leerPalabra (SecuenciaPalabras* secuencia, Palabra* palabra) {
+bool leerPalabra(SecuenciaPalabras* secuencia, Palabra* palabra) {
     char* cursor = secuencia->cursor;
     while (*cursor && !esLetra(*cursor)) {
         cursor++;
@@ -40,18 +40,18 @@ bool leerPalabra (SecuenciaPalabras* secuencia, Palabra* palabra) {
 }
 
 
-bool finSecuencia (const SecuenciaPalabras* secuencia) {
+bool finSecuencia(const SecuenciaPalabras* secuencia) {
     return secuencia->finSecuencia;
 }
 
 
-void mostrarPalabra (const Palabra* palabra) {
+void mostrarPalabra(const Palabra* palabra) {
     for (char* c = palabra->inicio; c <= palabra->fin; c++) {
         putchar(*c);
     };
 }
 
 
-bool esLetra (char c) {
+bool esLetra(char c) {
     return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
 }

@@ -31,11 +31,11 @@
 
     /* --------------------------- Funciones Prototipo -------------------------- */
     
-    void ingresarFechaAValidar (Fecha* fecha);
-    void ingresarDiasASumar (const char* mensaje, int* numero);
-    bool esFechaValida (const Fecha* fecha);
-    void sumarDiasALaFecha (const Fecha* fecha, int dias, Fecha* fechaSuma);
-    int diferenciaDeDiasEntreFechas (const Fecha* fecha1, const Fecha* fecha2);
-    int cantidadDeDiasEnElMes (int mes, int anio);
-    void mostrarFechaSumada (const Fecha* fecha);
+    void ingresarFechaAValidar(Fecha* fecha);
+    void ingresarDiasASumar(const char* mensaje, int* numero);
+    bool esFechaValida(const Fecha* fecha);
+    void sumarDiasALaFecha(const Fecha* fecha, int dias, Fecha* fechaSuma);
+    int diferenciaDeDiasEntreFechas(const Fecha* fecha1, const Fecha* fecha2);
+    int cantidadDeDiasEnElMes(int mes, int anio);
+    void mostrarFechaSumada(const Fecha* fecha);
 #endif

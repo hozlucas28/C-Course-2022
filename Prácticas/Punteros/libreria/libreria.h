@@ -16,7 +16,7 @@
 
     /* --------------------------- Funciones Prototipo -------------------------- */
 
-    void ingresarFechaAValidar (Fecha* fecha);
-    bool esFechaValida (const Fecha* fecha);
-    int cantDiasMes (int mes, int anio);
+    void ingresarFechaAValidar(Fecha* fecha);
+    bool esFechaValida(const Fecha* fecha);
+    int cantDiasMes(int mes, int anio);
 #endif

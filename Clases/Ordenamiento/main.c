@@ -8,16 +8,16 @@
 
 /* --------------------------- Funciones Prototipo -------------------------- */
 
-void intercambiar (int* a, int* b);
-int* vecBuscarMenor (int* inicio, int* fin);
-void vecOrdenarPorSeleccion (int* vector, int cantElementos);
-void mostrarVector (int* vector, int cantElementos);
+void intercambiar(int* a, int* b);
+int* vecBuscarMenor(int* inicio, int* fin);
+void vecOrdenarPorSeleccion(int* vector, int cantElementos);
+void mostrarVector(int* vector, int cantElementos);
 
 
 
 /* ------------------------- Funciones Desarrolladas ------------------------ */
 
-void intercambiar (int* a, int* b) {
+void intercambiar(int* a, int* b) {
     int aux = *a;
 
     *a = *b;
@@ -25,7 +25,7 @@ void intercambiar (int* a, int* b) {
 }
 
 
-int* vecBuscarMenor (int* inicio, int* fin) {
+int* vecBuscarMenor(int* inicio, int* fin) {
     int* menor = inicio;
 
     for (int* j = (inicio + 1); j <= fin; j++) {
@@ -35,7 +35,7 @@ int* vecBuscarMenor (int* inicio, int* fin) {
 }
 
 
-void vecOrdenarPorSeleccion (int* vector, int cantElementos) {
+void vecOrdenarPorSeleccion(int* vector, int cantElementos) {
     int* direccionDelMenor;
     int* ultimo = vector + (cantElementos - 1);
 
@@ -46,7 +46,7 @@ void vecOrdenarPorSeleccion (int* vector, int cantElementos) {
 }
 
 
-void mostrarVector (int* vector, int cantElementos) {
+void mostrarVector(int* vector, int cantElementos) {
     printf("[");
     for (int i = 0; i < cantElementos; i++) {
         printf(" %d ", vector[i]);

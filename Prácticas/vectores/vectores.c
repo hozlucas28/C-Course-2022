@@ -41,7 +41,7 @@ void eliminarElementoVector(int* vec, int* ce, int dato) {
 }
 
 
-void mostrarVector (char mensaje, int* vec, int ce) {
+void mostrarVector(char mensaje, int* vec, int ce) {
     printf("\n%s{", mensaje);
     for (int i = 0; i < ce; i++) {printf("%d ", vec[i]);};
     printf("}\n");
