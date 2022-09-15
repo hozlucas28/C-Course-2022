@@ -43,6 +43,7 @@ obj/
 *.elf
 
 # Linker output
+*.dat
 *.ilk
 *.map
 *.exp
