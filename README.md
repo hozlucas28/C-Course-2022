@@ -55,7 +55,7 @@
     Acknowledgments
 </h2>
 <p>
-    Thanks to <a href="https://www.udemy.com/user/alex-roel/" target="_blank">UNLaM</a> teachers of the Programming assignment to be part of it.
+    Thanks to <a href="https://www.unlam.edu.ar/" target="_blank">UNLaM</a> teachers of the Programming assignment to be part of it.
 </p>
 
 <h2>
