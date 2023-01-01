@@ -30,7 +30,7 @@
     Installation
 </h2>
 <p>
-    Clone the repository and use <a href="https://www.codeblocks.org/" target="_blank">CodeBlocks</a> (IDE). After that, select the lesson/practice that you want to test and then press the button: <i>Build and run</i>, it will run the lesson/practice that you selected. Done, now you can test any lesson/practice inside this repository.
+    Clone the repository and use <a href="https://www.codeblocks.org/" target="_blank">CodeBlocks</a> (IDE). After that, select the lesson/practice that you want to test and then press the button: <i>Build and run</i>, it will run the lesson/practice that you selected.
 </p>
 
 <h2>
